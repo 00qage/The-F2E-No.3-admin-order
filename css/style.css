@@ -1,0 +1,322 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+.clearfix {
+  clear: both; }
+
+.green {
+  color: #7ED321; }
+
+.red {
+  color: #D0021B; }
+
+.blue {
+  color: #4A90E2; }
+
+.yellow {
+  color: #F5A623; }
+
+.gray {
+  color: #9B9B9B; }
+
+#header {
+  display: inline-block;
+  width: 100%;
+  background: #000;
+  text-align: center;
+  height: 70px; }
+  #header .container {
+    display: inline-block;
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    background: #000;
+    clear: both; }
+    #header .container > * {
+      line-height: 70px; }
+    #header .container .logo {
+      width: 150px;
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+      text-align: left; }
+    #header .container .admin {
+      width: 60px;
+      font-size: 16px;
+      color: #fff;
+      font-weight: bold;
+      text-align: right; }
+    #header .container .menu {
+      width: calc(100% - 150px - 60px); }
+      #header .container .menu > * {
+        position: relative;
+        text-decoration: none;
+        font-size: 16px;
+        color: #9b9b9b;
+        font-weight: bold;
+        padding: 0 16px; }
+        #header .container .menu > *::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: inline-block;
+          width: 100%;
+          height: 3px;
+          background: #9b9b9b;
+          opacity: 0; }
+        #header .container .menu > *.active, #header .container .menu > *:hover {
+          color: #fff; }
+          #header .container .menu > *.active::after, #header .container .menu > *:hover::after {
+            opacity: 1;
+            background: #fff; }
+
+#main {
+  text-align: center;
+  width: 100%;
+  background: #F2F2F2;
+  padding-bottom: 42px; }
+  #main .container {
+    padding: 30px 0;
+    max-width: 940px; }
+    #main .container .info {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      font-family: Helvetica; }
+      #main .container .info > * {
+        height: 32px;
+        line-height: 32px; }
+      #main .container .info .left {
+        color: #000;
+        font-size: 24px;
+        font-weight: bold; }
+      #main .container .info .right {
+        font-size: 16px;
+        color: #9B9B9B;
+        text-align: right; }
+        #main .container .info .right .dates i {
+          color: #000;
+          margin: 0 8px;
+          -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+        #main .container .info .right .unit {
+          margin-left: 20px;
+          position: relative;
+          cursor: pointer; }
+          #main .container .info .right .unit:hover .list {
+            display: inline-block !important; }
+          #main .container .info .right .unit i {
+            color: #000;
+            margin: 0 8px; }
+          #main .container .info .right .unit .list {
+            display: none !important;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            display: inline-block;
+            width: 125px;
+            background: #FFFFFF;
+            -webkit-box-shadow: 1px 2px 10px 0 #9B9B9B;
+            box-shadow: 1px 2px 10px 0 #9B9B9B;
+            border-radius: 2px;
+            overflow: hidden; }
+            #main .container .info .right .unit .list > span {
+              display: inline-block;
+              text-align: center;
+              width: 100%;
+              height: 34px;
+              line-height: 34px;
+              color: #000; }
+              #main .container .info .right .unit .list > span.active, #main .container .info .right .unit .list > span:hover {
+                color: #fff;
+                background: #000; }
+    #main .container .n3 {
+      position: relative;
+      z-index: 1;
+      margin-top: 20px; }
+      #main .container .n3 > * {
+        width: calc((100% - 20px * 2) / 3);
+        height: 138px;
+        padding: 30px 0;
+        background: #FFFFFF;
+        -webkit-box-shadow: 0 0 10px 5px #EBEBEB;
+        box-shadow: 0 0 10px 5px #EBEBEB;
+        border-radius: 3px; }
+      #main .container .n3 + * {
+        margin-left: 20px; }
+      #main .container .n3 .panel > * {
+        width: 100%; }
+      #main .container .n3 .panel div {
+        width: 100%;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 16px;
+        color: #000; }
+        #main .container .n3 .panel div i {
+          font-size: 20px;
+          margin-right: 8px; }
+      #main .container .n3 .panel b {
+        font-size: 36px;
+        line-height: 36px; }
+    #main .container .n1 {
+      margin: 0 auto;
+      width: 100%;
+      height: 400px;
+      margin-top: 18px; }
+      #main .container .n1 .panel {
+        width: 100%;
+        height: 100%;
+        background: #FFFFFF;
+        -webkit-box-shadow: 0 0 10px 5px #EBEBEB;
+        box-shadow: 0 0 10px 5px #EBEBEB;
+        border-radius: 3px; }
+    #main .container .n2 {
+      width: 100%;
+      margin-top: 20px; }
+      #main .container .n2 > * {
+        width: calc((100% - 20px) / 2);
+        background: #FFFFFF;
+        -webkit-box-shadow: 0 0 10px 5px #EBEBEB;
+        box-shadow: 0 0 10px 5px #EBEBEB;
+        border-radius: 3px;
+        height: 456px; }
+        #main .container .n2 > * + * {
+          margin-left: 20px; }
+      #main .container .n2 .panel {
+        padding: 30px 40px;
+        text-align: left; }
+        #main .container .n2 .panel > b {
+          font-size: 24px;
+          color: #000; }
+      #main .container .n2 .left .list .item {
+        width: 100%;
+        height: 90px; }
+        #main .container .n2 .left .list .item + .item {
+          border-top: 1px solid #EBEBEB; }
+        #main .container .n2 .left .list .item span:first-child > i {
+          font-size: 45px;
+          color: #000;
+          line-height: 50px; }
+        #main .container .n2 .left .list .item .name {
+          width: calc(100% - 50px - 72px);
+          margin-left: 20px;
+          font-size: 16px;
+          color: #9B9B9B; }
+        #main .container .n2 .left .list .item .num {
+          width: 72px; }
+        #main .container .n2 .left .list .item .rate {
+          width: 50px;
+          position: relative; }
+          #main .container .n2 .left .list .item .rate:hover .tip {
+            display: inline-block; }
+          #main .container .n2 .left .list .item .rate i {
+            margin-right: 8px; }
+          #main .container .n2 .left .list .item .rate .tip {
+            text-align: center;
+            position: absolute;
+            bottom: calc(100% + 10px);
+            right: -67px;
+            display: none;
+            width: 186px;
+            height: 88px;
+            padding: 20px 16px;
+            background: #000;
+            border-radius: 3px; }
+            #main .container .n2 .left .list .item .rate .tip::after {
+              content: '';
+              position: absolute;
+              bottom: -4px;
+              left: 50%;
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              background: #000;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+            #main .container .n2 .left .list .item .rate .tip div {
+              font-size: 14px;
+              color: #FFFFFF; }
+              #main .container .n2 .left .list .item .rate .tip div b {
+                font-size: 20px;
+                line-height: 16px;
+                margin: 0 5px; }
+            #main .container .n2 .left .list .item .rate .tip i {
+              font-style: italic;
+              font-size: 14px;
+              color: #9B9B9B; }
+      #main .container .n2 .right .list {
+        margin-top: 22px;
+        width: 100%; }
+        #main .container .n2 .right .list .item {
+          width: 100%; }
+          #main .container .n2 .right .list .item + .item {
+            border-top: 1px solid #EBEBEB; }
+          #main .container .n2 .right .list .item .pic {
+            width: 100px;
+            height: 100px;
+            margin: 8px 0; }
+          #main .container .n2 .right .list .item .info {
+            padding-left: 20px;
+            margin-bottom: 20px; }
+            #main .container .n2 .right .list .item .info span {
+              font-size: 16px;
+              color: #9B9B9B; }
+              #main .container .n2 .right .list .item .info span i {
+                color: #757575;
+                margin-right: 8px;
+                font-size: 10px; }
+              #main .container .n2 .right .list .item .info span .fa-male {
+                font-size: 18px;
+                margin-left: 2px; }
+            #main .container .n2 .right .list .item .info b {
+              font-size: 20px;
+              font-weight: bold; }
+          #main .container .n2 .right .list .item .total {
+            width: 72px;
+            margin-bottom: 20px; }
+            #main .container .n2 .right .list .item .total span {
+              font-size: 14px;
+              color: #000000; }
+            #main .container .n2 .right .list .item .total b {
+              font-size: 20px;
+              color: #000000; }

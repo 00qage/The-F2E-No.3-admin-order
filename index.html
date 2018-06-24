@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>No3.admin order</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses'],
+                ['2004', 1000, 400],
+                ['2005', 1170, 460],
+                ['2006', 660, 1120],
+                ['2007', 1030, 540]
+            ]);
+
+            var options = {
+                title: 'Activity',
+                //   curveType: 'function',
+                legend: {
+                    position: 'bottom'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+
+<body lang="zh-tw">
+    <header id="header">
+        <div class="container d-flex justify-content-between">
+            <div class="logo">Shoptime</div>
+            <div class="menu d-flex justify-content-start ">
+                <a href="" class="active">HOME</a>
+                <a href="">ORDERS</a>
+                <a href="">PRODUCT</a>
+            </div>
+            <div class="admin">ADMIN</div>
+        </div>
+    </header>
+    <div id="main">
+        <div class="container ">
+            <div class="info d-flex justify-content-between align-items-center">
+                <div class="left">OVERVIEN</div>
+                <div class="right d-flex ">
+                    <div class="dates">
+                        <span>2018/6/6</span>
+                        <i class="fas fa-caret-down"></i>
+                        <span>2019/6/13</span>
+                    </div>
+                    <div class="unit">
+                        <span>Weekly</span>
+                        <i class="fas fa-caret-down"></i>
+                        <div class="list">
+                            <span>Daily</span>
+                            <span>Weekly</span>
+                            <span>Monthly</span>
+                            <span>Yearly</span>
+                            <span>Custom</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="n3 d-flex justify-content-between">
+                <div class="panel">
+                    <div>
+                        <i class="fas fa-hand-holding-usd"></i>TOTAL REVENUE</div>
+                    <b class="green">54,540</b>
+                </div>
+                <div class="panel">
+                    <div>
+                        <i class="fas fa-boxes"></i>TOTAL COST</div>
+                    <b class="red">12,660</b>
+                </div>
+                <div class="panel">
+                    <div>
+                        <i class="fas fa-money-bill"></i>NET INCOME</div>
+                    <b class="blue">41,880</b>
+                </div>
+            </div>
+            <div class="n1">
+                <div id="chart" class="panel"></div>
+            </div>
+            <div class="n2 d-flex ">
+                <div class="panel left">
+                    <b>Transaction Website</b>
+                    <div class="list">
+                        <div class="item d-flex  align-items-center">
+                            <span>
+                                <i class="fab fa-facebook"></i>
+                            </span>
+                            <span class="name">Facebook.com</span>
+                            <span class="num">45,836</span>
+                            <span class="rate d-flex align-items-center green">
+                                <i class="fas fa-arrow-up"></i>20%
+                            <div class="tip">
+                                <div>INCREASE<b class="green">889</b>VIEWS</div>
+                                <i>last week: 44,937</i>
+                            </div>
+                            </span>
+                        </div>
+                        <div class="item d-flex  align-items-center">
+                            <span>
+                                <i class="fab fa-google"></i>
+                            </span>
+                            <span class="name">google.com</span>
+                            <span class="num">23,582</span>
+                            <span class="rate d-flex align-items-center green">
+                                <i class="fas fa-arrow-up"></i>12%
+                            <div class="tip">
+                                <div>INCREASE<b class="green">889</b>VIEWS</div>
+                                <i>last week: 44,937</i>
+                            </div>
+                            </span>
+                        </div>
+                        <div class="item d-flex  align-items-center">
+                            <span>
+                                <i class="fas fa-shopping-bag"></i>
+                            </span>
+                            <span class="name">Shopify.com</span>
+                            <span class="num">2,489</span>
+                            <span class="rate d-flex align-items-center red">
+                                <i class="fas fa-arrow-down"></i>15%
+                            <div class="tip">
+                                <div>INCREASE<b class="green">889</b>VIEWS</div>
+                                <i>last week: 44,937</i>
+                            </div>
+                            </span>
+                        </div>
+                        <div class="item d-flex  align-items-center">
+                            <span>
+                                <i class="fab fa-wordpress-simple"></i>
+                            </span>
+                            <span class="name">Wordpress.com</span>
+                            <span class="num">1,057</span>
+                            <span class="rate d-flex align-items-center red">
+                                <i class="fas fa-arrow-down"></i>30%
+                            <div class="tip">
+                                <div>INCREASE<b class="green">889</b>VIEWS</div>
+                                <i>last week: 44,937</i>
+                            </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel right">
+                    <b>Latest Orders</b>
+                    <div class="list ">
+                        <div class="item d-flex">
+                            <div class="pic">
+                                <img src="./imades/index01.png" alt="">
+                            </div>
+                            <div class="info d-flex flex-column ">
+                                <b>Vintage T-shirt</b>
+                                <span><i class="fas fa-clock"></i>2018/6/13 13:42</span>
+                                <span><i class="fas fa-male"></i>Belle Willis</span>
+                            </div>
+                            <div class="total d-flex flex-column justify-content-end align-items-end ">
+                                <span>Total</span>
+                                <b>3,200</b>
+                            </div>
+                        </div>
+                        <div class="item d-flex flex-row">
+                            <div class="pic">
+                                <img src="./imades/index02.png" alt="">
+                            </div>
+                            <div class="info d-flex flex-column">
+                                <b>Cowboy Jacket</b>
+                                <span><i class="fas fa-clock"></i>2018/6/13 10:45</span>
+                                <span><i class="fas fa-male"></i>Adrian Cummings</span>
+                            </div>
+                            <div class="total d-flex flex-column justify-content-end align-items-end ">
+                                <span>Total</span>
+                                <b>2,800</b>
+                            </div>
+                        </div>
+                        <div class="item d-flex flex-row">
+                            <div class="pic">
+                                <img src="./imades/index03.png" alt="">
+                            </div>
+                            <div class="info d-flex flex-column">
+                                <b>Coach Coat</b>
+                                <span><i class="fas fa-clock"></i>2018/6/13 8:26</span>
+                                <span><i class="fas fa-male"></i>Lura Holland</span>
+                            </div>
+                            <div class="total d-flex flex-column justify-content-end align-items-end ">
+                                <span>Total</span>
+                                <b>1,600</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
